@@ -19,10 +19,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Android APK
+            - name: Build Android APK
         run: |
           npm run build
+          npx cap add android
           npx cap sync android
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
