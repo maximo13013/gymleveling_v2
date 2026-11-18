@@ -1,0 +1,7 @@
+{
+  "appId": "com.gymleveling.app",
+  "appName": "GymLeveling",
+  "webDir": "www",
+  "backgroundColor": "#0a0c0b",
+  "android": { "allowMixedContent": false }
+}

@@ -1,0 +1,26 @@
+GYMLEVELING - VERSION HORS-LIGNE (ANDROID)
+
+Cette version garde tout sur le telephone (seances, profil, progres).
+Elle n'a PAS : compte, classement mondial, coach IA, Premium reel, dons, messages au developpeur.
+Les donnees ne sont pas partagees avec la version dans Claude, et sont perdues si tu desinstalles l'appli.
+
+OPTION A - SANS RIEN INSTALLER (GitHub, gratuit)
+1. Cree un compte sur github.com puis un nouveau depot prive.
+2. Envoie tout le contenu de ce dossier dans le depot (bouton "Add file" > "Upload files").
+   Verifie que le dossier .github est bien envoye.
+3. Onglet "Actions" > "Build APK" > "Run workflow".
+4. Au bout de quelques minutes, ouvre l'execution terminee et telecharge
+   "GymLeveling-apk" (un zip qui contient app-debug.apk).
+5. Copie app-debug.apk sur ton telephone, ouvre-le et autorise
+   l'installation depuis cette source.
+
+OPTION B - SUR TON ORDINATEUR
+Prerequis : Node.js 18+, Java 17, Android Studio (SDK Android).
+   npm install
+   npx cap add android
+   npx cap sync android
+   cd android && ./gradlew assembleDebug
+L'APK est dans android/app/build/outputs/apk/debug/app-debug.apk
+
+Remarque : c'est un APK "debug", pratique pour toi. Pour le publier sur le Play Store,
+il faut un APK/AAB signe (Android Studio > Build > Generate Signed Bundle).
